@@ -1,0 +1,22 @@
+# Binaries
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+ex
+prog
+bin/
+build/
+out/
+
+# IDE / editors
+.vscode/
+.idea/
+*.user
+
+# OS
+.DS_Store
+Thumbs.db

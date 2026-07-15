@@ -1,0 +1,3 @@
+# Everything is built and run under WSL: LF line endings everywhere,
+# even on a Windows checkout (a CRLF Makefile breaks make)
+* text=auto eol=lf
