@@ -1,5 +1,5 @@
 // From new/delete to RAII and unique_ptr
-// Build: g++ -std=c++17 -Wall -Wextra raii.cpp -o prog && ./prog
+// Build: g++ -std=c++20 -Wall -Wextra raii.cpp -o prog && ./prog
 //
 // The initial version managed memory by hand and had two leaks:
 //   - a guaranteed leak: `session` (new without delete)
@@ -14,6 +14,7 @@
 #include <memory>
 #include <stdexcept>
 #include <string>
+#include <string_view>
 
 class DataLog {
 public:
@@ -21,7 +22,9 @@ public:
         std::cout << "[open] " << name_ << "\n";
     }
     ~DataLog() { std::cout << "[close] " << name_ << "\n"; }
-    void write(const std::string& line) { std::cout << name_ << ": " << line << "\n"; }
+    // string_view: write only reads the text, no copy, and accepts
+    // string literals as well as std::string
+    void write(std::string_view line) { std::cout << name_ << ": " << line << "\n"; }
 private:
     std::string name_;
 };

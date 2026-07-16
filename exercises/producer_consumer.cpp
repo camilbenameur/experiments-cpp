@@ -1,5 +1,5 @@
 // Producer/consumer: mutex + condition_variable + atomic
-// Build: g++ -std=c++17 -Wall -Wextra -pthread producer_consumer.cpp -o prog && ./prog
+// Build: g++ -std=c++20 -Wall -Wextra -pthread producer_consumer.cpp -o prog && ./prog
 //
 // A producer thread pushes 5 measurements, a consumer thread processes
 // them. The relative order of produced/consumed lines may vary from one

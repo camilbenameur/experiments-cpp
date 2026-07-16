@@ -1,5 +1,5 @@
 // Polymorphism, abstract class, virtual destructor
-// Build: g++ -std=c++17 -Wall -Wextra polymorphism.cpp -o prog && ./prog
+// Build: g++ -std=c++20 -Wall -Wextra polymorphism.cpp -o prog && ./prog
 //
 // The indispensable qualifier on ~Robot: `virtual`. Without it,
 // destroying through unique_ptr<Robot> would never call ~Drone / ~Rover:

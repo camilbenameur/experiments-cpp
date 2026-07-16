@@ -1,5 +1,5 @@
 // Bit manipulation: 16-bit sensor register
-// Build: g++ -std=c++17 -Wall -Wextra bits.cpp -o prog && ./prog
+// Build: g++ -std=c++20 -Wall -Wextra bits.cpp -o prog && ./prog
 //
 // A pressure sensor exposes a 16-bit STATUS register:
 //   bit 15    : READY   (1 = measurement available)
