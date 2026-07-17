@@ -1,3 +1,7 @@
 # Everything is built and run under WSL: LF line endings everywhere,
 # even on a Windows checkout (a CRLF Makefile breaks make)
 * text=auto eol=lf
+
+# catch.hpp is the official Catch2 single header, vendored as-is:
+# keep it out of language stats and collapse it in diffs
+auv-simulator/tests/catch.hpp linguist-vendored
